@@ -31,7 +31,7 @@ async function main() {
   if ($.body) {
     eval($.body);
   }
-  $.http.get({url: `https://purge.jsdelivr.net/gh/yangtingxiao/QuantumultX@master/scripts/jd/jd_lotteryMachine.js`}).then((resp) => {
+  $.http.get({url: ``}).then((resp) => {
     if (resp.statusCode === 200) {
       let { body } = resp;
       body = JSON.parse(body);
@@ -216,7 +216,7 @@ function harmony_collectScore(timeout = 0) {
   })
 }
 
-function updateShareCodes(url = 'https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js') {
+function updateShareCodes(url = '') {
   return new Promise(resolve => {
     const options = {
       url: `${url}?${Date.now()}`, "timeout": 10000, headers: {
@@ -250,7 +250,7 @@ function updateShareCodes(url = 'https://raw.githubusercontent.com/yangtingxiao/
     })
   })
 }
-function updateShareCodesCDN(url = 'https://cdn.jsdelivr.net/gh/yangtingxiao/QuantumultX@master/scripts/jd/jd_lotteryMachine.js') {
+function updateShareCodesCDN(url = '') {
   return new Promise(async resolve => {
     $.get({url: `${url}?${Date.now()}`, timeout: 10000}, async (err, resp, data) => {
       try {
