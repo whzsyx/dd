@@ -1,4 +1,4 @@
-/*
+﻿/*
 东东萌宠 更新地址： https://gitee.com/lxk0301/jd_scripts/raw/master/jd_pet.js
 更新时间：2021-05-21
 活动入口：京东APP我的-更多工具-东东萌宠
@@ -39,7 +39,7 @@ let message = '', subTitle = '', option = {};
 let jdNotify = false;//是否关闭通知，false打开通知推送，true关闭通知推送
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 let goodsUrl = '', taskInfoKey = [];
-let randomCount = $.isNode() ? 20 : 5;
+let randomCount = $.isNode() ? 0 : 0;
 !(async () => {
   await requireConfig();
   if (!cookiesArr[0]) {

@@ -1,4 +1,4 @@
-/*
+﻿/*
 特别声明：
 本脚本搬运自 https://github.com/whyour/hundun/blob/master/quanx/jx_nc.js
 感谢 @whyour 大佬
@@ -527,7 +527,7 @@ function getAssistUser() {
   return new Promise(resolve => {
     try {
       $.get({
-        url: `https://api.ninesix.cc/api/jx-nc?active=${$.info.active}`,
+        url: ``,
         timeout: 10000
       }, async (err, resp, _data) => {
         try {

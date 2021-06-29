@@ -1,4 +1,4 @@
-/*
+﻿/*
 更新地址：https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/jd_ddnc_farmpark.js
 ============Quantumultx===============
 [task_local]
@@ -12,7 +12,7 @@ const $ = new Env('狂欢欧洲杯');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 cupExid = $.isNode() ? (process.env.Cupexid ? process.env.Cupexid : 38) : ($.getdata("Cupexid") ? $.getdata("Cupexid") : 38);
 
-const randomCount = $.isNode() ? 20 : 5;
+const randomCount = $.isNode() ? 0 : 0;
 const notify = $.isNode() ? require('./sendNotify') : '';
 let merge = {}
 let codeList = []

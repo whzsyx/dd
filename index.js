@@ -1,4 +1,4 @@
-//'use strict';
+﻿//'use strict';
 exports.main_handler = async (event, context, callback) => {
   try {
     const { TENCENTSCF_SOURCE_TYPE, TENCENTSCF_SOURCE_URL } = process.env

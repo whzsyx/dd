@@ -1,4 +1,4 @@
-/*
+﻿/*
 crazyJoy任务
 
 每天运行一次即可
@@ -34,7 +34,7 @@ let applyJdBean = 2000; //疯狂的JOY京豆兑换，目前最小值为2000京�
 let cookiesArr = [], cookie = '', message = '';
 const inviteCodes = [
  ''];
-const randomCount = $.isNode() ? 10 : 5;
+const randomCount = $.isNode() ? 0 : 0;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
@@ -583,7 +583,7 @@ function taskUrl(functionId, body = '') {
 function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
-    $.get({url: `https://code.chiang.fun/api/v1/jd/jdcrazyjoy/read/${randomCount}/`, 'timeout': 10000}, (err, resp, data) => {
+    $.get({url: ``, 'timeout': 10000}, (err, resp, data) => {
       try {
         if (err) {
           console.log(`${JSON.stringify(err)}`)

@@ -1,4 +1,4 @@
-/*
+﻿/*
 * ==UserScript==
 * @ScriptName        领现金兑换红包
 * @Author            Cuttlefish

@@ -1,4 +1,4 @@
-/*
+﻿/*
 入口 京东 频道 京东众筹
 抽奖红包在我的钱包查看
 具体多少看运气
@@ -13,7 +13,7 @@ let jdNotify = true;//是否关闭通知，false打开通知推送，true关闭�
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '', message;
 
-const randomCount = $.isNode() ? 5 : 5;
+const randomCount = $.isNode() ? 0 : 0;
 
 
 if ($.isNode()) {

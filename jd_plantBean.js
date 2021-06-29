@@ -1,4 +1,4 @@
-/*
+﻿/*
 种豆得豆 脚本更新地址：https://gitee.com/lxk0301/jd_scripts/raw/master/jd_plantBean.js
 更新时间：2021-04-9
 活动入口：京东APP我的-更多工具-种豆得豆
@@ -41,7 +41,7 @@ let currentRoundId = null;//本期活动id
 let lastRoundId = null;//上期id
 let roundList = [];
 let awardState = '';//上期活动的京豆是否收取
-let randomCount = $.isNode() ? 20 : 5;
+let randomCount = $.isNode() ? 0 : 0;
 !(async () => {
   await requireConfig();
   if (!cookiesArr[0]) {

@@ -1,4 +1,4 @@
-/*
+﻿/*
 author：tg@chenxing666
 新潮品牌狂欢
 脚本兼容: Quantumult X, Surge, Loon, JSBox, Node.js

@@ -1,4 +1,4 @@
-/*
+﻿/*
 闪购盲盒
 长期活动，一人每天5次助力机会，10次被助机会，被助力一次获得一次抽奖机会，前几次必中京豆
 修改自 @yangtingxiao 抽奖机脚本
@@ -31,7 +31,7 @@ let lotteryResultFunPrefix = homeDataFunPrefix, browseTime = 6
 const inviteCodes = [
   ''
     ];
-const randomCount = $.isNode() ? 20 : 5;
+const randomCount = $.isNode() ? 0 : 0;
 const notify = $.isNode() ? require('./sendNotify') : '';
 let merge = {}
 //IOS等用户直接用NobyDa的jd cookie

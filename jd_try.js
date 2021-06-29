@@ -1,4 +1,4 @@
-/*
+﻿/*
 update 2021/4/11
 京东试用：脚本更新地址 https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_try.js
 脚本兼容: QuantumultX, Node.js

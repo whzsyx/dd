@@ -1,4 +1,4 @@
-/*
+﻿/*
 京享值PK
 
 需手动开宝箱
@@ -32,7 +32,7 @@ if ($.isNode()) {
 }
 
 const JD_API_HOST = "https://api.m.jd.com/client.action";
-$.helpAuthor = true;
+$.helpAuthor = false;
 !(async () => {
     if (!cookiesArr[0]) {
         $.msg(

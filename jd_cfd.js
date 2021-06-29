@@ -1,4 +1,4 @@
-/*
+﻿/*
 京喜财富岛
 根据github@MoPoQAQ 财富岛脚本修改而来。无需京喜token,只需京东cookie即可.
 cron 5 8,13,19 * * * jd_cfd.js
@@ -42,7 +42,7 @@ $.result = [];
 $.shareCodes = [];
 let cookiesArr = [], cookie = '', token;
 
-const randomCount = $.isNode() ? 3 : 3;
+const randomCount = $.isNode() ? 0 : 0;
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
@@ -1156,7 +1156,7 @@ function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
     $.get({
-      url: `http://api.sharecode.ga/api/jxcfd/${randomCount}`,
+      url: ``,
       'timeout': 10000
     }, (err, resp, data) => {
       try {

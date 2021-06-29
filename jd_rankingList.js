@@ -1,24 +1,18 @@
 /*
-京东排行榜
-更新时间：2020-11-20 13:55
-脚本说明：京东排行榜签到得京豆
-活动入口：找不着了，点击脚本通知进入吧
-脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
+京东排行�?更新时间�?020-11-20 13:55
+脚本说明：京东排行榜签到得京�?活动入口：找不着了，点击脚本通知进入�?脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 // quantumultx
 [task_local]
-#京东排行榜
-11 9 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js, tag=京东排行榜, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
+#京东排行�?11 9 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js, tag=京东排行�? img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
 // Loon
 [Script]
-cron "11 9 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js,tag=京东排行榜
-// Surge
-京东排行榜 = type=cron,cronexp=11 9 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js
+cron "11 9 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js,tag=京东排行�?// Surge
+京东排行�?= type=cron,cronexp=11 9 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js
  */
-const $ = new Env('京东排行榜');
+const $ = new Env('京东排行�?);
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-const needSum = false;     //是否需要显示汇总
-const STRSPLIT = "|";
+const needSum = false;     //是否需要显示汇�?const STRSPLIT = "|";
 let merge = {}
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '';
@@ -34,19 +28,17 @@ if ($.isNode()) {
 const JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
 !(async () => {
   if (!cookiesArr[0]) {
-    $.msg($.name, '【提示】请先获取cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/', {"open-url": "https://bean.m.jd.com/"});
+    $.msg($.name, '【提示】请先获取cookie\n直接使用NobyDa的京东签到获�?, 'https://bean.m.jd.com/', {"open-url": "https://bean.m.jd.com/"});
     return;
   }
   for (let i = 0; i < cookiesArr.length; i++) {
     cookie = cookiesArr[i];
     if (cookie) {
-      if (i) console.log(`\n***************开始京东账号${i + 1}***************`)
+      if (i) console.log(`\n***************开始京东账�?{i + 1}***************`)
       initial();
       await  QueryJDUserInfo();
-      if (!merge.enabled)  //cookie不可用
-      {
-        $.setdata('', `CookieJD${i ? i + 1 : "" }`);//cookie失效，故清空cookie。
-        $.msg($.name, `【提示】京东账号${i + 1} cookie已过期！请先获取cookie\n直接使用NobyDa的京东签到获取`, 'https://bean.m.jd.com/', {"open-url": "https://bean.m.jd.com/"});
+      if (!merge.enabled)  //cookie不可�?      {
+        $.setdata('', `CookieJD${i ? i + 1 : "" }`);//cookie失效，故清空cookie�?        $.msg($.name, `【提示】京东账�?{i + 1} cookie已过期！请先获取cookie\n直接使用NobyDa的京东签到获取`, 'https://bean.m.jd.com/', {"open-url": "https://bean.m.jd.com/"});
         continue;
       }
       await queryTrumpTask();
@@ -113,7 +105,7 @@ function queryTrumpTask(timeout = 0) {
             if (data.result.signTask.taskItemInfo.signList[i].match(now)) {
               merge.jdBeans.fail++;
               merge.jdBeans.notify = `${now}已签过`;
-              console.log(now + '已签过')
+              console.log(now + '已签�?)
               return
             }
           }
@@ -122,10 +114,10 @@ function queryTrumpTask(timeout = 0) {
             if (data.result.taskList[i].taskItemInfo.status === 0) {
               await doTrumpTask(data.result.taskList[i].taskId,data.result.taskList[i].taskItemInfo.itemId,1000)
             } else {
-              console.log('已完成')
+              console.log('已完�?)
             }
           }
-          console.log('开始签到')
+          console.log('开始签�?)
           await doTrumpTask(4,"1",1000)
         } catch (e) {
           $.logErr(e, resp);
@@ -138,8 +130,7 @@ function queryTrumpTask(timeout = 0) {
 }
 
 
-//做任务
-function doTrumpTask(taskId,itemId,timeout = 0) {
+//做任�?function doTrumpTask(taskId,itemId,timeout = 0) {
   return new Promise((resolve) => {
     setTimeout( ()=>{
       let url = {
@@ -179,13 +170,11 @@ function doTrumpTask(taskId,itemId,timeout = 0) {
 
 
 
-//初始化
-function initial() {
+//初始�?function initial() {
   merge = {
     nickname: "",
     enabled: true,
-    //blueCoin: {prizeDesc : "收取|蓝币|个",number : true},  //定义 动作|奖励名称|奖励单位   是否是数字
-    jdBeans: {prizeDesc : "获得|京豆|个",number : true,fixed : 0}
+    //blueCoin: {prizeDesc : "收取|蓝币|�?,number : true},  //定义 动作|奖励名称|奖励单位   是否是数�?    jdBeans: {prizeDesc : "获得|京豆|�?,number : true,fixed : 0}
   }
   for (let i in merge) {
     merge[i].success = 0;
@@ -199,11 +188,11 @@ function initial() {
 function msgShow() {
   let message = "";
   let url ={ "open-url" : `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%20%22des%22:%20%22m%22,%20%22url%22:%20%22https://h5.m.jd.com/babelDiy/Zeus/3wtN2MjeQgjmxYTLB3YFcHjKiUJj/index.html%22%20%7D`}
-  let title = `京东账号：${merge.nickname}`;
+  let title = `京东账号�?{merge.nickname}`;
   for (let i in merge) {
     if (typeof (merge[i]) !== "object" || !merge[i].show) continue;
     if (merge[i].notify.split("").reverse()[0] === "\n") merge[i].notify = merge[i].notify.substr(0,merge[i].notify.length - 1);
-    message += `${merge[i].prizeDesc.split(STRSPLIT)[0]}${merge[i].prizeDesc.split(STRSPLIT)[1]}：` + (merge[i].success ? `${merge[i].prizeCount.toFixed(merge[i].fixed)}${merge[i].prizeDesc.split(STRSPLIT)[2]}\n` : `失败：${merge[i].notify}\n`)
+    message += `${merge[i].prizeDesc.split(STRSPLIT)[0]}${merge[i].prizeDesc.split(STRSPLIT)[1]}：` + (merge[i].success ? `${merge[i].prizeCount.toFixed(merge[i].fixed)}${merge[i].prizeDesc.split(STRSPLIT)[2]}\n` : `失败�?{merge[i].notify}\n`)
   }
 //合计
   if (needSum)
