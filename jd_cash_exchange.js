@@ -10,7 +10,7 @@
 * @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Jd/ddgksf2013_cash_exchange.js
 [task_local]
 #半点京豆雨
-0 0 20 12 * https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/ddgksf2013_cash_exchange.js, tag=半点京豆雨, enabled=true
+0 0 20 12 * https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_cash_exchange.js, tag=半点京豆雨, enabled=true
 
 ================Loon==============
 [Script]
