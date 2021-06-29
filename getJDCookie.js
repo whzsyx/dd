@@ -79,7 +79,7 @@ function checkLogin() {
         'Connection': 'Keep-Alive',
         'Content-Type': 'application/x-www-form-urlencoded; Charset=UTF-8',
         'Accept': 'application/json, text/plain, */*',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+        'User-Agent': 'jdapp;android;10.0.1;10;7346234673161363-6636135383360316;network/wifi;model/MI 8 Explorer Edition;addressid/1410532825;aid/7d2d7a16fc158c0a;oaid/869b3d4c33ab5db8;osVer/29;appBuild/88405;partner/xiaomi001;eufv/1;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 10; MI 8 Explorer Edition Build/QKQ1.190828.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045227 Mobile Safari/537.36',
       }
     }
     $.post(options, (err, resp, data) => {
@@ -162,7 +162,7 @@ function taskUrl() {
       'Accept': 'application/json, text/plain, */*',
       'Accept-Language': 'zh-cn',
       'Referer': `https://plogin.m.jd.com/login/login?appid=300&returnurl=https://wq.jd.com/passport/LoginRedirect?state=${Date.now()}&returnurl=https://home.m.jd.com/myJd/newhome.action?sceneval=2&ufc=&/myJd/home.action&source=wq_passport`,
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+      'User-Agent': 'jdapp;android;10.0.1;10;7346234673161363-6636135383360316;network/wifi;model/MI 8 Explorer Edition;addressid/1410532825;aid/7d2d7a16fc158c0a;oaid/869b3d4c33ab5db8;osVer/29;appBuild/88405;partner/xiaomi001;eufv/1;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 10; MI 8 Explorer Edition Build/QKQ1.190828.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045227 Mobile Safari/537.36',
       'Host': 'plogin.m.jd.com'
     }
   }
@@ -178,7 +178,7 @@ function taskPostUrl() {
       'Accept': 'application/json, text/plain, */*',
       'Accept-Language': 'zh-cn',
       'Referer': `https://plogin.m.jd.com/login/login?appid=300&returnurl=https://wq.jd.com/passport/LoginRedirect?state=${Date.now()}&returnurl=https://home.m.jd.com/myJd/newhome.action?sceneval=2&ufc=&/myJd/home.action&source=wq_passport`,
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+      'User-Agent': 'jdapp;android;10.0.1;10;7346234673161363-6636135383360316;network/wifi;model/MI 8 Explorer Edition;addressid/1410532825;aid/7d2d7a16fc158c0a;oaid/869b3d4c33ab5db8;osVer/29;appBuild/88405;partner/xiaomi001;eufv/1;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 10; MI 8 Explorer Edition Build/QKQ1.190828.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045227 Mobile Safari/537.36',
       'Host': 'plogin.m.jd.com'
     }
   }
