@@ -14,13 +14,13 @@
 
 ================Loon==============
 [Script]
-cron "0 0 20 12 *" script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/ddgksf2013_cash_exchange.js,tag=半点京豆雨
+cron "0 0 20 12 *" script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_cash_exchange.js,tag=半点京豆雨
 
 ===============Surge=================
- 半点京豆雨 = type=cron,cronexp="0 0 20 12 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/ddgksf2013_cash_exchange.js
+ 半点京豆雨 = type=cron,cronexp="0 0 20 12 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_cash_exchange.js
 
 ============小火箭=========
- 半点京豆雨= type=cron,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/ddgksf2013_cash_exchange.js, cronexpr="0 0 20 12 *",timeout=200, enable=true
+ 半点京豆雨= type=cron,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_cash_exchange.js, cronexpr="0 0 20 12 *",timeout=200, enable=true
  */
 const $ = new Env('领现金兑换红包');
 const printDetail = false;
