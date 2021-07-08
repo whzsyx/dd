@@ -2,19 +2,18 @@
 
 https://wbbny.m.jd.com/babelDiy/Zeus/2rtpffK8wqNyPBH6wyUDuBKoAbCt/index.html
 
-12 9,11,13,15,17 * * * https://raw.githubusercontent.com/smiek2221/scripts/master/jd_summer_movement.js
-
-需要解密
-https://raw.githubusercontent.com/smiek2221/scripts/master/MovementFaker.js
+[task_local]
+#燃动夏季
+12 9,11,13,15,17 * * * smiek2221_summer_movement.js
 
 */
 const $ = new Env('燃动夏季');
-const MovementFaker = require('./MovementFaker.js')
+const MovementFaker = require('./smiek2221_MovementFaker.js')
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-const ShHelpFlag = true;//是否内部助力  true 助力，false 不助力
-const ShHelpAuthorFlag = false;//是否助力作者SH  true 助力，false 不助力
+const ShHelpFlag = true;//是否SH助力  true 助力，false 不助力
+const ShHelpAuthorFlag = true;//是否助力作者SH  true 助力，false 不助力
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [];
 $.cookie = '';
@@ -56,15 +55,14 @@ const UA = $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT :
       if($.hotFlag)$.secretpInfo[$.UserName] = false;//火爆账号不执行助力
     }
   }
+
+  // 助力
   let res = [];
   if (new Date().getUTCHours() + 8 >= 17) res = await getAuthorShareCode() || [];
   if (ShHelpAuthorFlag) {
     $.innerShInviteList = getRandomArrayElements([...$.innerShInviteList, ...res], [...$.innerShInviteList, ...res].length);
     $.ShInviteList.push(...$.innerShInviteList);
   }
-  
-
-  // 助力
   for (let i = 0; i < cookiesArr.length; i++) {
     $.cookie = cookiesArr[i];
     $.canHelp = true;
@@ -135,9 +133,8 @@ async function movement() {
       }
     }
     await $.wait(1000);
-    console.log('百元守卫站')
+    console.log('\n百元守卫站')
     await takePostRequest('olypicgames_guradHome');
-    
     await $.wait(1000);
     await takePostRequest('olympicgames_getTaskDetail');
     await $.wait(1000);
@@ -334,6 +331,7 @@ async function dealReturn(type, res) {
         console.log(`SH互助码：${data.data.result && data.data.result.inviteId || '助力已满，获取助力码失败'}`);
         if (data.data.result && data.data.result.inviteId) {
           if (data.data.result.inviteId) $.ShInviteList.push(data.data.result.inviteId);
+          console.log(`守护金额：${Number(data.data.result.activityLeftAmount || 0)} 护盾剩余：${timeFn(Number(data.data.result.guardLeftSeconds || 0)*1000)} 离结束剩：${timeFn(Number(data.data.result.activityLeftSeconds || 0)*1000)}`)
         }
         $.taskList = data.data.result && data.data.result.taskVos || [];
       }
@@ -483,7 +481,22 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
 
-  
+function timeFn(dateBegin) {
+  //如果时间格式是正确的，那下面这一步转化时间格式就可以不用了
+  var dateEnd = new Date(0);//获取当前时间
+  var dateDiff = dateBegin - dateEnd.getTime();//时间差的毫秒数
+  var leave1 = dateDiff % (24 * 3600 * 1000)    //计算天数后剩余的毫秒数
+  var hours = Math.floor(leave1 / (3600 * 1000))//计算出小时数
+  //计算相差分钟数
+  var leave2 = leave1 % (3600 * 1000)    //计算小时数后剩余的毫秒数
+  var minutes = Math.floor(leave2 / (60 * 1000))//计算相差分钟数
+  //计算相差秒数
+  var leave3 = leave2 % (60 * 1000)      //计算分钟数后剩余的毫秒数
+  var seconds = Math.round(leave3 / 1000)
+
+  var timeFn = hours + ":" + minutes + ":" + seconds;
+  return timeFn;
+}
 
 
 
