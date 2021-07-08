@@ -1,4 +1,4 @@
-﻿/*
+/*
 超级直播间红包雨
 更新时间：2021-06-4
 下一场超级直播间时间:06月11日  18:00，直播间地址：https://h5.m.jd.com/dev/3pbY8ZuCx4ML99uttZKLHC2QcAMn/live.html?id=4334560

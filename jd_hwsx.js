@@ -1,11 +1,11 @@
-﻿/*
+/*
 入口 京东 频道 京东众筹
 抽奖红包在我的钱包查看
 具体多少看运气
 [task_local]
 20 12,14 * * *
 */
-const $ = new Env('柠檬众筹好物上新');
+const $ = new Env('京东众筹好物上新');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -13,7 +13,7 @@ let jdNotify = true;//是否关闭通知，false打开通知推送，true关闭�
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '', message;
 
-const randomCount = $.isNode() ? 0 : 0;
+const randomCount = $.isNode() ? 5 : 5;
 
 
 if ($.isNode()) {

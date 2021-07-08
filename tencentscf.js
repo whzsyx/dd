@@ -1,4 +1,4 @@
-﻿// Depends on tencentcloud-sdk-nodejs version 4.0.3 or higher
+// Depends on tencentcloud-sdk-nodejs version 4.0.3 or higher
 const tencentcloud = require("tencentcloud-sdk-nodejs");
 const fs = require("fs");
 const yaml = require("js-yaml");

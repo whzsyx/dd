@@ -1,4 +1,4 @@
-﻿/*
+/*
 美丽研究院
 更新时间:2021-05-08
 活动入口：京东app首页-美妆馆-底部中间按钮
@@ -13,7 +13,7 @@ const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const WebSocket = require('ws');
 //const WebSocket = $.isNode() ? require('websocket').w3cwebsocket: SockJS;
 let jdNotify = true;//是否关闭通知，false打开通知推送，true关闭通知推送
-const randomCount = $.isNode() ? 0 : 0;
+const randomCount = $.isNode() ? 20 : 5;
 $.accountCheck = true;
 $.init = false;
 // const bean = 1; //兑换多少豆，默认是500

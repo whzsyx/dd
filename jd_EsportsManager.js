@@ -1,4 +1,4 @@
-﻿/**
+/**
  Author: JDHelloWorld
  东东电竞经理:脚本更新地址 jd_EsportsManager.js
  更新时间：2021-06-20

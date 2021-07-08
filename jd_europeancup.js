@@ -1,4 +1,4 @@
-﻿/*
+/*
 更新地址：https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/jd_ddnc_farmpark.js
 ============Quantumultx===============
 [task_local]
@@ -12,7 +12,7 @@ const $ = new Env('狂欢欧洲杯');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 cupExid = $.isNode() ? (process.env.Cupexid ? process.env.Cupexid : 38) : ($.getdata("Cupexid") ? $.getdata("Cupexid") : 38);
 
-const randomCount = $.isNode() ? 0 : 0;
+const randomCount = $.isNode() ? 20 : 5;
 const notify = $.isNode() ? require('./sendNotify') : '';
 let merge = {}
 let codeList = []
@@ -103,7 +103,7 @@ $.shareuuid = "" //俺的助力码
 
         if (message.length != 0) {
             if ($.isNode()) {
-                await notify.sendNotify("欧洲狂欢杯", `${message}\n 欧洲杯入口：https://lzdz-isv.isvjcloud.com/dingzhi/hisense/europeancup/activity/7431935?activityId=901100032442101&shareUuid=b7f58330cb0844b485afacbdea3c7bca&adsource=null&initHash=/home&shareuserid4minipg=8A+Mf3SBYE8spQtvzQ2VLE7oeVP9kq2pYSH90mYt4m3fwcJlClpxrfmVYaGKuquQkdK3rLBQpEQH9V4tdrrh0w==&shopid=undefined&lng=107.146945&lat=33.255267&sid=cad74d1c843bd47422ae20cadf6fe5aw&un_area=8_573_6627_52446\n\n吹水群：https://t.me/wenmouxx`);
+                await notify.sendNotify("欧洲狂欢杯", `${message}\n 欧洲杯入口：https://lzdz-isv.isvjcloud.com/dingzhi/hisense/europeancup/activity/7431935?activityId=901100032442101&shareUuid=&adsource=null&initHash=/home&shareuserid4minipg=8A+Mf3SBYE8spQtvzQ2VLE7oeVP9kq2pYSH90mYt4m3fwcJlClpxrfmVYaGKuquQkdK3rLBQpEQH9V4tdrrh0w==&shopid=undefined&lng=107.146945&lat=33.255267&sid=cad74d1c843bd47422ae20cadf6fe5aw&un_area=8_573_6627_52446\n\n吹水群：https://t.me/wenmouxx`);
             } else {
                 $.msg($.name, "", '欧洲狂欢杯' + message)
             }

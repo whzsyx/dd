@@ -1,4 +1,4 @@
-﻿/*
+/*
 author: 疯疯
 东东健康社区
 更新时间：2021-4-22
@@ -28,7 +28,7 @@ let cookiesArr = [],
 const inviteCodes = [
 ''
 ]
-const randomCount = $.isNode() ? 0 : 0;
+const randomCount = $.isNode() ? 20 : 5;
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item]);

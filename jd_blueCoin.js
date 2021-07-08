@@ -1,4 +1,4 @@
-﻿/*
+/*
 东东超市兑换奖品 脚本地址：https://gitee.com/lxk0301/jd_scripts/raw/master/jd_blueCoin.js
 感谢@yangtingxiao提供PR
 更新时间：2021-6-7
