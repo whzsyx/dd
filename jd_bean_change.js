@@ -5,6 +5,7 @@
 =================================Quantumultx=========================
 [task_local]
 #京东月资产变动通知
+.
 10 7 1-31/7 * * https://raw.githubusercontent.com/jiulan/platypus/main/scripts/jd_all_bean_change.js, tag=翻翻乐提现, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 =================================Loon===================================
 [Script]
